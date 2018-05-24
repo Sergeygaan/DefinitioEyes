@@ -12,7 +12,7 @@ namespace DefinitioEyes
 {
     public partial class FrmPrincipal : Form
     {
-        //Объявление всех переменных, векторов и хааркаскадов
+        //Объявление всех переменных и хааркаскадов
         private Image<Bgr, Byte> _currentFrame;
         private Capture _capture;
         private HaarCascade _eyes;
@@ -28,13 +28,23 @@ namespace DefinitioEyes
 
         private void Detection(object sender, EventArgs e)
         {
-            //Инициализация камеры
-            _capture = new Capture();
-            _capture.QueryFrame();
+            try
+            {
+                //Инициализация камеры
+                _capture = new Capture();
+                _capture.QueryFrame();
 
-            //Инициализация события  FrameGrabber
-            Application.Idle += new EventHandler(FrameHandler);
-            button1.Enabled = false;
+                //Инициализация события  FrameGrabber
+                Application.Idle += new EventHandler(FrameHandler);
+                button1.Enabled = false;
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show(error.Message);
+
+                Application.Idle -= new EventHandler(FrameHandler);
+                button1.Enabled = true;
+            }
         }
 
         private void FrameHandler(object sender, EventArgs e)
