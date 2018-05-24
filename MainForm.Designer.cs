@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DetectionButton = new System.Windows.Forms.Button();
             this.imageBoxFrameGrabber = new Emgu.CV.UI.ImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageBoxFrameGrabber)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // DetectionButton
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(113, 258);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Eye detection";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Detection);
+            this.DetectionButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.DetectionButton.Location = new System.Drawing.Point(113, 258);
+            this.DetectionButton.Name = "DetectionButton";
+            this.DetectionButton.Size = new System.Drawing.Size(105, 35);
+            this.DetectionButton.TabIndex = 2;
+            this.DetectionButton.Text = "Eye detection";
+            this.DetectionButton.UseVisualStyleBackColor = true;
+            this.DetectionButton.Click += new System.EventHandler(this.Detection);
             // 
             // imageBoxFrameGrabber
             // 
@@ -60,7 +60,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 304);
             this.Controls.Add(this.imageBoxFrameGrabber);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.DetectionButton);
             this.Name = "FrmPrincipal";
             this.Text = "Eye detection";
             ((System.ComponentModel.ISupportInitialize)(this.imageBoxFrameGrabber)).EndInit();
@@ -70,7 +70,7 @@
 
         #endregion
         private Emgu.CV.UI.ImageBox imageBoxFrameGrabber;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DetectionButton;
     }
 }
 

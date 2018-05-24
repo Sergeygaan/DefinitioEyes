@@ -36,14 +36,14 @@ namespace DefinitioEyes
 
                 //Инициализация события  FrameGrabber
                 Application.Idle += new EventHandler(FrameHandler);
-                button1.Enabled = false;
+                DetectionButton.Enabled = false;
             }
             catch(Exception error)
             {
                 MessageBox.Show(error.Message);
 
                 Application.Idle -= new EventHandler(FrameHandler);
-                button1.Enabled = true;
+                DetectionButton.Enabled = true;
             }
         }
 
