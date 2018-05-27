@@ -8,8 +8,14 @@ using System.Threading.Tasks;
 
 namespace DefinitioEyes
 {
+    /// <summary>
+    /// Интерфейс, для работы с методами обнаружения объектов
+    /// </summary>
     interface IObjectDetection
     {
+        /// <summary>
+        /// Метод, обнаружения глаз человека
+        /// </summary>
         Image<Bgr, Byte> EyeDetection(Image<Bgr, Byte> _currentImage);
     }
 }

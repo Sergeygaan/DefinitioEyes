@@ -8,8 +8,14 @@ using System.Windows.Forms;
 
 namespace DefinitioEyes
 {
+    /// <summary>
+    /// Класс, для работы с файлами
+    /// </summary>
     class ActionsImage : IActionsImage
     {
+        /// <summary>
+        /// Метод, для загрузки изображения
+        /// </summary>
         public Bitmap LoadImage()
         {
             Bitmap LoadImage = null; 
@@ -29,6 +35,9 @@ namespace DefinitioEyes
             return LoadImage;
         }
 
+        /// <summary>
+        /// Метод, для сохранения изображения
+        /// </summary>
         public void SaveImage()
         {
             throw new NotImplementedException();

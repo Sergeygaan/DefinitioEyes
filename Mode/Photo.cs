@@ -10,12 +10,29 @@ using System.Windows.Forms;
 
 namespace DefinitioEyes
 {
+    /// <summary>
+    /// Класс, для работы с фото
+    /// </summary>
     class Photo : IMode
     {
+        /// <summary>
+        /// Переменная, хранящаяя в себе объект в который будет выводиться изображение
+        /// </summary>
         private PictureBox _pictureBox;
+
+        /// <summary>
+        /// Переменная, хранящаяя в класс, который используется для обнаружения глаз человека
+        /// </summary>
         private ObjectDetection _eyeDetection;
+
+        /// <summary>
+        /// Переменная, хранящаяя в класс для загрузки и сохранения фото
+        /// </summary>
         private ActionsImage _workImage;
 
+        /// <summary>
+        /// Метод, инициализации переменных
+        /// </summary>
         public Photo(PictureBox PictureBox, ObjectDetection EyeDetection)
         {
             _workImage = new ActionsImage();
@@ -24,6 +41,9 @@ namespace DefinitioEyes
             _eyeDetection = EyeDetection;
         }
 
+        /// <summary>
+        /// Метод, по обнаружению глаз человека на фото
+        /// </summary>
         public void Start()
         {
             try
@@ -43,6 +63,9 @@ namespace DefinitioEyes
             }
         }
 
+        /// <summary>
+        /// Метод, необходимый для завершения обработки. Если это необходимо
+        /// </summary>
         public void Stop()
         {
             //throw new NotImplementedException();

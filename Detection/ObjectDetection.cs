@@ -9,13 +9,34 @@ using System.Threading.Tasks;
 
 namespace DefinitioEyes
 {
+    /// <summary>
+    /// Класс, обнаружения объектов
+    /// </summary>
     class ObjectDetection : IObjectDetection
     {
+        /// <summary>
+        /// Переменная, хранящаяя в себе загруженный каскад Хаара
+        /// </summary>
         private HaarCascade _haarCascade;
+
+        /// <summary>
+        /// Переменная, хранящаяя в себе коэффициент увеличения изображения
+        /// </summary>
         private double _scaleFactor;
+
+        /// <summary>
+        /// Переменная, хранящаяя в себе группировку предварительно обнаруженных событий
+        /// </summary>
         private int _minNeighbors;
+
+        /// <summary>
+        /// Переменная, хранящаяя в себе максимальный размер изображения
+        /// </summary>
         private int _minSize;
 
+        /// <summary>
+        /// Метод, инициализации переменных
+        /// </summary>
         public ObjectDetection(string FullPathHaarCascade, double ScaleFactor, int MinNeighbors, int MinSize)
         {
             //Загрузка HaarCascade для обнаружения лиц
@@ -26,6 +47,9 @@ namespace DefinitioEyes
             _minSize = MinSize;
         }
 
+        /// <summary>
+        /// Метод, обнаружения объекта с учетом загруженных переменных
+        /// </summary>
         public Image<Bgr, Byte> EyeDetection(Image<Bgr, Byte> _currentImage)
         {
             //Преобразование в серые цвета
