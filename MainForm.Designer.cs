@@ -154,12 +154,12 @@
             65536});
             this.ScaleFactor.Location = new System.Drawing.Point(549, 97);
             this.ScaleFactor.Maximum = new decimal(new int[] {
-            5,
+            3,
             0,
             0,
             0});
             this.ScaleFactor.Minimum = new decimal(new int[] {
-            5,
+            11,
             0,
             0,
             65536});

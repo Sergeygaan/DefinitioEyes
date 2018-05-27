@@ -33,19 +33,25 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, инициализации переменных
         /// </summary>
-        public Photo(PictureBox PictureBox, ObjectDetection EyeDetection)
+        public Photo(PictureBox PictureBox)
         {
             _workImage = new ActionsImage();
 
             _pictureBox = PictureBox;
-            _eyeDetection = EyeDetection;
         }
 
         /// <summary>
         /// Метод, по обнаружению глаз человека на фото
         /// </summary>
-        public void Start()
+        public void Start(ObjectDetection EyeDetection)
         {
+            if (EyeDetection == null)
+            {
+                return;
+            }
+
+            _eyeDetection = EyeDetection;
+
             try
             {
                 _pictureBox.Image = _workImage.LoadImage();

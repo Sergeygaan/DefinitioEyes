@@ -14,7 +14,7 @@ namespace DefinitioEyes
         /// <summary>
         /// Запуск метода, по обнаружению глаз человека на фото
         /// </summary>
-        void Start();
+        void Start(ObjectDetection EyeDetection);
 
         /// <summary>
         /// Метод, необходимый для завершения обработки. Если это необходимо

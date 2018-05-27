@@ -41,8 +41,8 @@ namespace DefinitioEyes
 
             ActiveMode.SelectedIndex = 0;
 
-            _modesDetection.Add(new Video(pictureBox1, CreateObjectDetection()));
-            _modesDetection.Add(new Photo(pictureBox1, CreateObjectDetection()));
+            _modesDetection.Add(new Video(pictureBox1));
+            _modesDetection.Add(new Photo(pictureBox1));
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace DefinitioEyes
                 currentMode.Stop();
             }
 
-            _modesDetection[ActiveMode.SelectedIndex].Start();
+            _modesDetection[ActiveMode.SelectedIndex].Start(CreateObjectDetection());
         }
 
         /// <summary>
