@@ -36,6 +36,9 @@ namespace DefinitioEyes
         public FrmPrincipal()
         {      
             InitializeComponent();
+
+            ActiveMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+
             ActiveMode.SelectedIndex = 0;
 
             _modesDetection.Add(new Video(pictureBox1, CreateObjectDetection()));
