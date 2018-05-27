@@ -51,7 +51,7 @@
             // DetectionButton
             // 
             this.DetectionButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.DetectionButton.Location = new System.Drawing.Point(338, 217);
+            this.DetectionButton.Location = new System.Drawing.Point(431, 217);
             this.DetectionButton.Name = "DetectionButton";
             this.DetectionButton.Size = new System.Drawing.Size(105, 35);
             this.DetectionButton.TabIndex = 2;
@@ -94,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(350, 36);
+            this.label2.Location = new System.Drawing.Point(338, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 13);
             this.label2.TabIndex = 8;
@@ -103,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(335, 58);
+            this.label3.Location = new System.Drawing.Point(338, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 13);
             this.label3.TabIndex = 9;
@@ -112,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(335, 82);
+            this.label4.Location = new System.Drawing.Point(338, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(209, 13);
             this.label4.TabIndex = 10;
@@ -121,7 +121,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(335, 104);
+            this.label5.Location = new System.Drawing.Point(338, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(281, 13);
             this.label5.TabIndex = 11;
@@ -130,7 +130,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(335, 128);
+            this.label6.Location = new System.Drawing.Point(338, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(198, 13);
             this.label6.TabIndex = 12;
@@ -138,7 +138,7 @@
             // 
             // FullPathHaarCascade
             // 
-            this.FullPathHaarCascade.Location = new System.Drawing.Point(546, 55);
+            this.FullPathHaarCascade.Location = new System.Drawing.Point(549, 65);
             this.FullPathHaarCascade.Name = "FullPathHaarCascade";
             this.FullPathHaarCascade.Size = new System.Drawing.Size(156, 20);
             this.FullPathHaarCascade.TabIndex = 13;
@@ -152,7 +152,7 @@
             0,
             0,
             65536});
-            this.ScaleFactor.Location = new System.Drawing.Point(546, 82);
+            this.ScaleFactor.Location = new System.Drawing.Point(549, 97);
             this.ScaleFactor.Maximum = new decimal(new int[] {
             5,
             0,
@@ -174,7 +174,7 @@
             // 
             // MinNeighbors
             // 
-            this.MinNeighbors.Location = new System.Drawing.Point(622, 102);
+            this.MinNeighbors.Location = new System.Drawing.Point(625, 125);
             this.MinNeighbors.Maximum = new decimal(new int[] {
             10,
             0,
@@ -191,7 +191,7 @@
             // 
             // MinSize
             // 
-            this.MinSize.Location = new System.Drawing.Point(539, 128);
+            this.MinSize.Location = new System.Drawing.Point(542, 154);
             this.MinSize.Maximum = new decimal(new int[] {
             30,
             0,
@@ -215,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 307);
+            this.ClientSize = new System.Drawing.Size(749, 261);
             this.Controls.Add(this.MinSize);
             this.Controls.Add(this.MinNeighbors);
             this.Controls.Add(this.ScaleFactor);
