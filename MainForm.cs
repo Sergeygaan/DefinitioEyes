@@ -13,65 +13,35 @@ namespace DefinitioEyes
     public partial class FrmPrincipal : Form
     {
         //Объявление всех переменных и хааркаскадов
-        private Image<Bgr, Byte> _currentFrame;
-        private Capture _capture;
-        private HaarCascade _eyes;
+
+        private List<IMode> _modesDetection = new List<IMode>();
+
+        private Video _videoDetection;
+        private Photo _photoDetection;
 
         public FrmPrincipal()
-        {
+        {      
             InitializeComponent();
+            ActiveMode.SelectedIndex = 0;
 
-            //Загрузка HaarCascade для обнаружения лиц
-            _eyes = new HaarCascade("haarcascade_eye.xml");
+            _modesDetection.Add(new Video(pictureBox1, CreateObjectDetection()));
+            _modesDetection.Add(new Photo(pictureBox1, CreateObjectDetection()));
         }
 
 
         private void Detection(object sender, EventArgs e)
         {
-            try
+            foreach(var currentMode in _modesDetection)
             {
-                //Инициализация камеры
-                _capture = new Capture();
-                _capture.QueryFrame();
-
-                //Инициализация события  FrameGrabber
-                Application.Idle += new EventHandler(FrameHandler);
-                DetectionButton.Enabled = false;
+                currentMode.Stop();
             }
-            catch(Exception error)
-            {
-                MessageBox.Show(error.Message);
 
-                Application.Idle -= new EventHandler(FrameHandler);
-                DetectionButton.Enabled = true;
-            }
+            _modesDetection[ActiveMode.SelectedIndex].Start();
         }
 
-        private void FrameHandler(object sender, EventArgs e)
+        private ObjectDetection CreateObjectDetection()
         {
-            //Получение текущего изображение с камеры
-            _currentFrame = _capture.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
-
-            //Преобразование в серые цвета
-            Image<Gray, byte> _gray = _currentFrame.Convert<Gray, Byte>();
-
-            //Распознание лиц
-            MCvAvgComp[][] facesDetected = _gray.DetectHaarCascade(
-                _eyes,
-                1.2,
-                5,
-                Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING,
-                new Size(20, 20));
-
-            //Действие для каждого обнаруженного элемента
-            foreach (MCvAvgComp CurrentFace in facesDetected[0])
-            {
-                //Выделение найденного лица
-                _currentFrame.Draw(CurrentFace.rect, new Bgr(Color.Red), 1);
-            }
-
-            //Вывод результата
-            imageBoxFrameGrabber.Image = _currentFrame;
+            return new ObjectDetection(FullPathHaarCascade.Text, Convert.ToDouble(ScaleFactor.Value), Convert.ToInt16(MinNeighbors.Value), Convert.ToInt16(MinSize.Value));
         }
     }
 }

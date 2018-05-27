@@ -75,12 +75,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\ActionsImage.cs" />
+    <Compile Include="Interface\IActionsImage.cs" />
+    <Compile Include="Interface\IMode.cs" />
+    <Compile Include="Interface\IObjectDetection.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Detection\ObjectDetection.cs" />
+    <Compile Include="Mode\Photo.cs" />
+    <Compile Include="Mode\Video.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
