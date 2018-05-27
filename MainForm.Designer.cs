@@ -51,11 +51,11 @@
             // DetectionButton
             // 
             this.DetectionButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.DetectionButton.Location = new System.Drawing.Point(431, 217);
+            this.DetectionButton.Location = new System.Drawing.Point(483, 217);
             this.DetectionButton.Name = "DetectionButton";
             this.DetectionButton.Size = new System.Drawing.Size(105, 35);
             this.DetectionButton.TabIndex = 2;
-            this.DetectionButton.Text = "Eye detection";
+            this.DetectionButton.Text = "Запустить";
             this.DetectionButton.UseVisualStyleBackColor = true;
             this.DetectionButton.Click += new System.EventHandler(this.Detection);
             // 

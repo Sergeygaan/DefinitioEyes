@@ -12,7 +12,7 @@ namespace DefinitioEyes
     interface IMode
     {
         /// <summary>
-        /// Метод, по обнаружению глаз человека на фото
+        /// Запуск метода, по обнаружению глаз человека на фото
         /// </summary>
         void Start();
 
