@@ -16,6 +16,6 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, обнаружения глаз человека
         /// </summary>
-        Image<Bgr, Byte> EyeDetection(Image<Bgr, Byte> _currentImage);
+        Image<Bgr, Byte> Detection(Image<Bgr, Byte> _currentImage);
     }
 }

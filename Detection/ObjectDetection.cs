@@ -58,7 +58,7 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, обнаружения объекта с учетом загруженных переменных
         /// </summary>
-        public Image<Bgr, Byte> EyeDetection(Image<Bgr, Byte> _currentImage)
+        public Image<Bgr, Byte> Detection(Image<Bgr, Byte> _currentImage)
         {
             if (_haarCascade != null)
             {

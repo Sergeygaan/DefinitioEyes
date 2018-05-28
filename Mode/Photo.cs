@@ -61,7 +61,7 @@ namespace DefinitioEyes
                 var IMG = new Image<Bgr, byte>((Bitmap)_pictureBox.Image);
 
                 //Вывод результата
-                _pictureBox.Image = _eyeDetection.EyeDetection(IMG).Bitmap;
+                _pictureBox.Image = _eyeDetection.Detection(IMG).Bitmap;
             }
             catch(Exception error)
             {

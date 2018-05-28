@@ -96,7 +96,7 @@ namespace DefinitioEyes
             Image<Bgr, Byte> _currentFrame = _capture.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
 
             //Вывод результата
-            _pictureBox.Image = _eyeDetection.EyeDetection(_currentFrame).Bitmap;
+            _pictureBox.Image = _eyeDetection.Detection(_currentFrame).Bitmap;
         }
     }
 }
