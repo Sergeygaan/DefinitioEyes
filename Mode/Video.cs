@@ -92,11 +92,16 @@ namespace DefinitioEyes
         /// </summary>
         private void FrameHandler(object sender, EventArgs e)
         {
-            ////Получение текущего изображение с камеры
-            Image<Bgr, Byte> _currentFrame = _capture.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
+            if (_capture != null)
+            {
+                //Получение текущего изображение с камеры
+                Image<Bgr, Byte> _currentFrame = _capture.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
 
-            //Вывод результата
-            _pictureBox.Image = _eyeDetection.Detection(_currentFrame).Bitmap;
+                //Вывод результата
+                _pictureBox.Image = _eyeDetection.Detection(_currentFrame).Bitmap;
+
+                _currentFrame.Dispose();
+            }
         }
     }
 }
