@@ -1,6 +1,6 @@
 ﻿namespace DefinitioEyes
 {
-    partial class FrmPrincipal
+    partial class MainForm
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -211,7 +211,7 @@
             0,
             0});
             // 
-            // FrmPrincipal
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -229,7 +229,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ActiveMode);
             this.Controls.Add(this.DetectionButton);
-            this.Name = "FrmPrincipal";
+            this.Name = "MainForm";
             this.Text = "Eye detection";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScaleFactor)).EndInit();

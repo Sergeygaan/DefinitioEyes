@@ -13,7 +13,7 @@ namespace DefinitioEyes
     /// <summary>
     /// Класс, являющийся гланым в программе.
     /// </summary>
-    public partial class FrmPrincipal : Form
+    public partial class MainForm : Form
     {
         /// <summary>
         /// Переменная, хранящая в себе классы команд.
@@ -33,7 +33,7 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, инициализации всех объектов
         /// </summary>
-        public FrmPrincipal()
+        public MainForm()
         {      
             InitializeComponent();
 
