@@ -56,7 +56,7 @@ namespace DefinitioEyes
             {
                 _pictureBox.Image = _workImage.LoadImage();
 
-                _pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                _pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
                 var IMG = new Image<Bgr, byte>((Bitmap)_pictureBox.Image);
 
