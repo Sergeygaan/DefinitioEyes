@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="DefinitioEyes.ActionsImage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="0.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAABA=</HashCode>
       <FileName>Actions\ActionsImage.cs</FileName>
@@ -9,22 +9,22 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="DefinitioEyes.ObjectDetection" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIAAAAAIAAgBAAAAAAAAAAAAAAAABA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAAAAAAAIAAgBAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Detection\ObjectDetection.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.169" Collapsed="true" />
   </Class>
-  <Class Name="DefinitioEyes.FrmPrincipal" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+  <Class Name="DefinitioEyes.MainForm" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAABACACAAEJAAACCAAAACAAAAAAIAAQAAACBARAA=</HashCode>
       <FileName>MainForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DefinitioEyes.Photo" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="1.5" Width="1.5" />
+    <Position X="3" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAASAAAAACAAAAAAABAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Mode\Photo.cs</FileName>
@@ -32,50 +32,31 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="DefinitioEyes.Video" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="4" Y="2.5" Width="1.5" />
+    <Position X="5.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAASAACAACAQAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Mode\Video.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="DefinitioEyes.Program" Collapsed="true">
-    <Position X="4" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DefinitioEyes.Properties.Resources" Collapsed="true">
-    <Position X="5.75" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DefinitioEyes.Properties.Settings" Collapsed="true">
-    <Position X="2.25" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Interface Name="DefinitioEyes.IActionsImage" Collapsed="true">
-    <Position X="2.25" Y="3.75" Width="1.5" />
+    <Position X="0.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAABA=</HashCode>
       <FileName>Interface\IActionsImage.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="DefinitioEyes.IMode" Collapsed="true">
-    <Position X="4" Y="3.75" Width="1.5" />
+    <Position X="6.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Interface\IMode.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="DefinitioEyes.IObjectDetection" Collapsed="true">
-    <Position X="5.75" Y="3.75" Width="1.5" />
+    <Position X="4.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interface\IObjectDetection.cs</FileName>
     </TypeIdentifier>
   </Interface>
