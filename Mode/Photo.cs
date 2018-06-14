@@ -33,24 +33,24 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, инициализации переменных
         /// </summary>
-        public Photo(PictureBox PictureBox)
+        public Photo(PictureBox pictureBox)
         {
             _workImage = new ActionsImage();
 
-            _pictureBox = PictureBox;
+            _pictureBox = pictureBox;
         }
 
         /// <summary>
         /// Метод, по обнаружению глаз человека на фото
         /// </summary>
-        public void Start(ObjectDetection EyeDetection)
+        public void Start(ObjectDetection eyeDetection)
         {
-            if (EyeDetection == null)
+            if (eyeDetection == null)
             {
                 return;
             }
 
-            _eyeDetection = EyeDetection;
+            _eyeDetection = eyeDetection;
 
             try
             {
@@ -62,6 +62,8 @@ namespace DefinitioEyes
 
                 //Вывод результата
                 _pictureBox.Image = _eyeDetection.Detection(IMG).Bitmap;
+
+                IMG.Dispose();
             }
             catch(Exception error)
             {

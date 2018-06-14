@@ -20,17 +20,17 @@ namespace DefinitioEyes
         {
             Bitmap LoadImage = null; 
 
-            OpenFileDialog dlg = new OpenFileDialog();
+            OpenFileDialog OpenFile = new OpenFileDialog();
 
-            dlg.Title = "Open Image";
-            dlg.Filter = "jpg files (*.bmp)|*.bmp|All files (*.*)|*.*";
+            OpenFile.Title = "Open Image";
+            OpenFile.Filter = "jpg files (*.bmp)|*.bmp|All files (*.*)|*.*";
 
-            if (dlg.ShowDialog() == DialogResult.OK)
+            if (OpenFile.ShowDialog() == DialogResult.OK)
             {
-                LoadImage = new Bitmap(dlg.OpenFile());
+                LoadImage = new Bitmap(OpenFile.OpenFile());
             }
 
-            dlg.Dispose();
+            OpenFile.Dispose();
 
             return LoadImage;
         }

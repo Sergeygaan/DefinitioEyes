@@ -32,22 +32,22 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, инициализации переменных
         /// </summary>
-        public Video(PictureBox PictureBox)
+        public Video(PictureBox pictureBox)
         {
-            _pictureBox = PictureBox;
+            _pictureBox = pictureBox;
         }
 
         /// <summary>
         /// Метод, по обнаружению глаз человека в видео потоке
         /// </summary>
-        public void Start(ObjectDetection EyeDetection)
+        public void Start(ObjectDetection eyeDetection)
         {
-            if(EyeDetection == null)
+            if(eyeDetection == null)
             {
                 return;
             }
 
-            _eyeDetection = EyeDetection;
+            _eyeDetection = eyeDetection;
 
             try
             {
