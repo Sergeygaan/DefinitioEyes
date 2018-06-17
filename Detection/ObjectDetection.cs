@@ -38,6 +38,10 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, инициализации переменных
         /// </summary>
+        /// <param name="eyeDetection"> Переменная, хранящая полный путь до загружаемого каскада Хаара.</param>
+        /// <param name="scaleFactor"> Переменная, хранящая коэффициент увеличения изображения.</param>
+        /// <param name="minNeighbors"> Переменная, хранящая группировку предварительно обнаруженных событий.</param>
+        /// <param name="minSize"> Переменная, хранящая минимальный размер изображения.</param>
         public ObjectDetection(string fullPathHaarCascade, double scaleFactor, int minNeighbors, int minSize)
         {
             //Загрузка HaarCascade для обнаружения лиц
@@ -58,6 +62,7 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, обнаружения объекта с учетом загруженных переменных
         /// </summary>
+        /// <param name="currentImage"> Переменная, хранящая текущее изображение.</param>
         public Image<Bgr, Byte> Detection(Image<Bgr, Byte> currentImage)
         {
             if (_haarCascade != null)
@@ -68,10 +73,10 @@ namespace DefinitioEyes
                 //Распознание лиц
                 MCvAvgComp[][] facesDetected = _gray.DetectHaarCascade(
                     _haarCascade,
-                    _scaleFactor, //Коэффициент увеличения изображения 
-                    _minNeighbors, //Группировка предварительно обнаруженных событий
-                    Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, //Минимальный размер
-                    new Size(_minSize, _minSize)); //Максимальный размер 
+                    _scaleFactor, 
+                    _minNeighbors, 
+                    Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, 
+                    new Size(_minSize, _minSize)); 
 
                 //Действие для каждого обнаруженного элемента
                 foreach (MCvAvgComp CurrentFace in facesDetected[0])

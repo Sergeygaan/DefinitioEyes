@@ -33,6 +33,7 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, инициализации переменных
         /// </summary>
+        /// <param name="pictureBox"> Переменная, хранящаяя в себе объект в который будет выводиться изображение.</param>
         public Photo(PictureBox pictureBox)
         {
             _workImage = new ActionsImage();
@@ -43,6 +44,7 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, по обнаружению глаз человека на фото
         /// </summary>
+        /// <param name="eyeDetection"> Класс, обнаружения объектов.</param>
         public void Start(ObjectDetection eyeDetection)
         {
             if (eyeDetection == null)

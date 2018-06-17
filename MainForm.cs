@@ -48,7 +48,9 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, включающий обнаружение объекта с учетом выбранного режима
         /// </summary>
-        private void Detection(object sender, EventArgs e)
+        /// <param name="sender"> Объект, который вызвал событие.</param>
+        /// <param name="events"> Cодержащих данные событий.</param>
+        private void Detection(object sender, EventArgs events)
         {
             foreach(var currentMode in _modesDetection)
             {

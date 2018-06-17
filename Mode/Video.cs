@@ -32,6 +32,7 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, инициализации переменных
         /// </summary>
+        /// <param name="pictureBox"> Переменная, хранящаяя в себе объект в который будет выводиться изображение.</param>
         public Video(PictureBox pictureBox)
         {
             _pictureBox = pictureBox;
@@ -40,6 +41,7 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, по обнаружению глаз человека в видео потоке
         /// </summary>
+        /// <param name="eyeDetection"> Класс, обнаружения объектов.</param>
         public void Start(ObjectDetection eyeDetection)
         {
             if(eyeDetection == null)
@@ -90,7 +92,9 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, для получения изображения с видеокамеры
         /// </summary>
-        private void FrameHandler(object sender, EventArgs e)
+        /// <param name="sender"> Объект, который вызвал событие.</param>
+        /// <param name="events"> Cодержащих данные событий.</param>
+        private void FrameHandler(object sender, EventArgs events)
         {
             if (_capture != null)
             {
