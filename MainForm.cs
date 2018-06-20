@@ -37,12 +37,12 @@ namespace DefinitioEyes
         {      
             InitializeComponent();
 
-            ActiveMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            _activeMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
-            ActiveMode.SelectedIndex = 0;
+            _activeMode.SelectedIndex = 0;
 
-            _modesDetection.Add(new Video(pictureBox1));
-            _modesDetection.Add(new Photo(pictureBox1));
+            _modesDetection.Add(new Video(_pictureBox));
+            _modesDetection.Add(new Photo(_pictureBox));
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace DefinitioEyes
                 currentMode.Stop();
             }
 
-            _modesDetection[ActiveMode.SelectedIndex].Start(CreateObjectDetection());
+            _modesDetection[_activeMode.SelectedIndex].Start(CreateObjectDetection());
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace DefinitioEyes
         /// </summary>
         private ObjectDetection CreateObjectDetection()
         {
-            return new ObjectDetection(FullPathHaarCascade.Text, Convert.ToDouble(ScaleFactor.Value), Convert.ToInt16(MinNeighbors.Value), Convert.ToInt16(MinSize.Value));
+            return new ObjectDetection(_fullPathHaarCascade.Text, Convert.ToDouble(_scaleFactor.Value), Convert.ToInt16(_minNeighbors.Value), Convert.ToInt16(_minSize.Value));
         }
     }
 }

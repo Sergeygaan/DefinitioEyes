@@ -68,10 +68,10 @@ namespace DefinitioEyes
             if (_haarCascade != null)
             {
                 //Преобразование в серые цвета
-                Image<Gray, byte> _gray = currentImage.Convert<Gray, Byte>();
+                Image<Gray, byte> grayCurrentImage = currentImage.Convert<Gray, Byte>();
 
                 //Распознание лиц
-                MCvAvgComp[][] facesDetected = _gray.DetectHaarCascade(
+                MCvAvgComp[][] facesDetected = grayCurrentImage.DetectHaarCascade(
                     _haarCascade,
                     _scaleFactor, 
                     _minNeighbors, 
@@ -79,10 +79,10 @@ namespace DefinitioEyes
                     new Size(_minSize, _minSize)); 
 
                 //Действие для каждого обнаруженного элемента
-                foreach (MCvAvgComp CurrentFace in facesDetected[0])
+                foreach (MCvAvgComp currentEye in facesDetected[0])
                 {
                     //Выделение найденного лица
-                    currentImage.Draw(CurrentFace.rect, new Bgr(Color.Red), 1);
+                    currentImage.Draw(currentEye.rect, new Bgr(Color.Red), 1);
                 }
             }
 

@@ -99,12 +99,12 @@ namespace DefinitioEyes
             if (_capture != null)
             {
                 //Получение текущего изображение с камеры
-                Image<Bgr, Byte> _currentFrame = _capture.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
+                Image<Bgr, Byte> currentFrame = _capture.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
 
                 //Вывод результата
-                _pictureBox.Image = _eyeDetection.Detection(_currentFrame).Bitmap;
+                _pictureBox.Image = _eyeDetection.Detection(currentFrame).Bitmap;
 
-                _currentFrame.Dispose();
+                currentFrame.Dispose();
             }
         }
     }

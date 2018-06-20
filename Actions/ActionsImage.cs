@@ -18,21 +18,21 @@ namespace DefinitioEyes
         /// </summary>
         public Bitmap LoadImage()
         {
-            Bitmap LoadImage = null; 
+            Bitmap loadImage = null; 
 
-            OpenFileDialog OpenFile = new OpenFileDialog();
+            OpenFileDialog ppenFile = new OpenFileDialog();
 
-            OpenFile.Title = "Open Image";
-            OpenFile.Filter = "jpg files (*.bmp)|*.bmp|All files (*.*)|*.*";
+            ppenFile.Title = "Open Image";
+            ppenFile.Filter = "jpg files (*.bmp)|*.bmp|All files (*.*)|*.*";
 
-            if (OpenFile.ShowDialog() == DialogResult.OK)
+            if (ppenFile.ShowDialog() == DialogResult.OK)
             {
-                LoadImage = new Bitmap(OpenFile.OpenFile());
+                loadImage = new Bitmap(ppenFile.OpenFile());
             }
 
-            OpenFile.Dispose();
+            ppenFile.Dispose();
 
-            return LoadImage;
+            return loadImage;
         }
 
         /// <summary>

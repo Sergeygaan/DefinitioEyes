@@ -57,15 +57,14 @@ namespace DefinitioEyes
             try
             {
                 _pictureBox.Image = _workImage.LoadImage();
-
                 _pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
-                var IMG = new Image<Bgr, byte>((Bitmap)_pictureBox.Image);
+                var currentImage = new Image<Bgr, byte>((Bitmap)_pictureBox.Image);
 
                 //Вывод результата
-                _pictureBox.Image = _eyeDetection.Detection(IMG).Bitmap;
+                _pictureBox.Image = _eyeDetection.Detection(currentImage).Bitmap;
 
-                IMG.Dispose();
+                currentImage.Dispose();
             }
             catch(Exception error)
             {
