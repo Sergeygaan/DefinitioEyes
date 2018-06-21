@@ -59,7 +59,8 @@ namespace DefinitioEyes
         /// </summary>
         private ObjectDetection CreateObjectDetection()
         {
-            return new ObjectDetection(_fullPathHaarCascade.Text, Convert.ToDouble(_scaleFactor.Value), Convert.ToInt16(_minNeighbors.Value), Convert.ToInt16(_minSize.Value));
+            return new ObjectDetection(_fullPathHaarCascade.Text, Convert.ToDouble(_scaleFactor.Value), 
+                                        Convert.ToInt16(_minNeighbors.Value), Convert.ToInt16(_minSize.Value));
         }
     }
 }

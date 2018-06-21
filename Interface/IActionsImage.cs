@@ -5,7 +5,7 @@ namespace DefinitioEyes
     /// <summary>
     /// Интерфейс, для работы с файлами
     /// </summary>
-    interface IActionsImage
+    public interface IActionsImage
     {
         /// <summary>
         /// Метод, для загрузки изображения

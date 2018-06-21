@@ -3,7 +3,7 @@
     /// <summary>
     /// Интерфейс, для работы с режимами обнаружения
     /// </summary>
-    interface IMode
+    public interface IMode
     {
         /// <summary>
         /// Запуск метода, по обнаружению глаз человека на фото

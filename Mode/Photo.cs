@@ -9,7 +9,7 @@ namespace DefinitioEyes
     /// <summary>
     /// Класс, для работы с фото
     /// </summary>
-    class Photo : IMode
+    public class Photo : IMode
     {
         /// <summary>
         /// Переменная, хранящаяя в себе объект в который будет выводиться изображение

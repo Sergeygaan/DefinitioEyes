@@ -9,7 +9,7 @@ namespace DefinitioEyes
     /// <summary>
     /// Класс, обнаружения объектов
     /// </summary>
-    class ObjectDetection : IObjectDetection
+    public class ObjectDetection : IObjectDetection
     {
         /// <summary>
         /// Переменная, хранящаяя в себе загруженный каскад Хаара

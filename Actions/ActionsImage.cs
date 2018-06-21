@@ -7,7 +7,7 @@ namespace DefinitioEyes
     /// <summary>
     /// Класс, для работы с файлами
     /// </summary>
-    class ActionsImage : IActionsImage
+    public class ActionsImage : IActionsImage
     {
         /// <summary>
         /// Метод, для загрузки изображения

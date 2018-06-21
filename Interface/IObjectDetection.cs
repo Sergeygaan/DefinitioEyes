@@ -7,7 +7,7 @@ namespace DefinitioEyes
     /// <summary>
     /// Интерфейс, для работы с методами обнаружения объектов
     /// </summary>
-    interface IObjectDetection
+    public interface IObjectDetection
     {
         /// <summary>
         /// Метод, обнаружения глаз человека

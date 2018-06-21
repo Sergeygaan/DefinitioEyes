@@ -8,7 +8,7 @@ namespace DefinitioEyes
     /// <summary>
     /// Класс, для работы с видео потоком
     /// </summary>
-    class Video : IMode
+    public class Video : IMode
     {
         /// <summary>
         /// Переменная, хранящаяя подключение к видео камере
