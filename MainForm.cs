@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using Emgu.CV;
-using Emgu.CV.Structure;
-using Emgu.CV.CvEnum;
-using System.IO;
-using System.Diagnostics;
 
 namespace DefinitioEyes
 {
@@ -37,7 +31,7 @@ namespace DefinitioEyes
         {      
             InitializeComponent();
 
-            _activeMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            _activeMode.DropDownStyle = ComboBoxStyle.DropDownList;
 
             _activeMode.SelectedIndex = 0;
 

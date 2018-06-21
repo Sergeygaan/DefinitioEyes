@@ -1,10 +1,6 @@
 ﻿using Emgu.CV;
 using Emgu.CV.Structure;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DefinitioEyes
@@ -58,7 +54,7 @@ namespace DefinitioEyes
                 _capture.QueryFrame();
 
                 //Инициализация события  FrameGrabber
-                Application.Idle += new EventHandler(FrameHandler);
+                Application.Idle += FrameHandler;
             }
             catch (Exception error)
             {
@@ -81,7 +77,7 @@ namespace DefinitioEyes
         /// </summary>
         private void Dispose()
         {
-            Application.Idle -= new EventHandler(FrameHandler);
+            Application.Idle -= FrameHandler;
 
             if (_capture != null)
             {
