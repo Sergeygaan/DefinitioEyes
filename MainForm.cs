@@ -51,16 +51,20 @@ namespace DefinitioEyes
                 currentMode.Stop();
             }
 
-            _modesDetection[_activeMode.SelectedIndex].Start(CreateObjectDetection());
+            _modesDetection[_activeMode.SelectedIndex]
+                .Start(CreateObjectDetection());
         }
 
         /// <summary>
-        /// Метод, для создания класса, который используется для обнаружения глаз человека
+        /// Метод, для создания класса, который используется
+        /// для обнаружения глаз человека
         /// </summary>
         private ObjectDetection CreateObjectDetection()
         {
-            return new ObjectDetection(_fullPathHaarCascade.Text, Convert.ToDouble(_scaleFactor.Value), 
-                                        Convert.ToInt16(_minNeighbors.Value), Convert.ToInt16(_minSize.Value));
+            return new ObjectDetection(_fullPathHaarCascade.Text, 
+                            Convert.ToDouble(_scaleFactor.Value),     
+                            Convert.ToInt16(_minNeighbors.Value),
+                            Convert.ToInt16(_minSize.Value));
         }
     }
 }

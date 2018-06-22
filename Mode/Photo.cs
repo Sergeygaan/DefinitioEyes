@@ -12,12 +12,14 @@ namespace DefinitioEyes
     public class Photo : IMode
     {
         /// <summary>
-        /// Переменная, хранящаяя в себе объект в который будет выводиться изображение
+        /// Переменная, хранящаяя в себе объект
+        /// в который будет выводиться изображение
         /// </summary>
         private PictureBox _pictureBox;
 
         /// <summary>
-        /// Переменная, хранящаяя в класс, который используется для обнаружения глаз человека
+        /// Переменная, хранящаяя в класс,
+        /// который используется для обнаружения глаз человека
         /// </summary>
         private ObjectDetection _eyeDetection;
 
@@ -29,7 +31,8 @@ namespace DefinitioEyes
         /// <summary>
         /// Метод, инициализации переменных
         /// </summary>
-        /// <param name="pictureBox"> Переменная, хранящаяя в себе объект в который будет выводиться изображение.</param>
+        /// <param name="pictureBox"> Переменная, хранящаяя в себе
+        /// объект в который будет выводиться изображение.</param>
         public Photo(PictureBox pictureBox)
         {
             _workImage = new ActionsImage();
@@ -55,10 +58,12 @@ namespace DefinitioEyes
                 _pictureBox.Image = _workImage.LoadImage();
                 _pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
-                var currentImage = new Image<Bgr, byte>((Bitmap)_pictureBox.Image);
+                var currentImage = new Image<Bgr, byte>(
+                    (Bitmap)_pictureBox.Image);
 
                 //Вывод результата
-                _pictureBox.Image = _eyeDetection.Detection(currentImage).Bitmap;
+                _pictureBox.Image = _eyeDetection
+                    .Detection(currentImage).Bitmap;
 
                 currentImage.Dispose();
             }
@@ -69,7 +74,8 @@ namespace DefinitioEyes
         }
 
         /// <summary>
-        /// Метод, необходимый для завершения обработки. Если это необходимо
+        /// Метод, необходимый для завершения обработки.
+        /// Если это необходимо
         /// </summary>
         public void Stop()
         {

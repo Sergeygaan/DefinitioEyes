@@ -16,19 +16,22 @@ namespace DefinitioEyes
         private Capture _capture;
 
         /// <summary>
-        /// Переменная, хранящаяя в себе объект в который будет выводиться изображение
+        /// Переменная, хранящаяя в себе объект в который будет
+        /// выводиться изображение
         /// </summary>
         private PictureBox _pictureBox;
 
         /// <summary>
-        /// Переменная, хранящаяя класс, который используется для обнаружения глаз человека
+        /// Переменная, хранящаяя класс, который используется
+        /// для обнаружения глаз человека
         /// </summary>
         private ObjectDetection _eyeDetection;
 
         /// <summary>
         /// Метод, инициализации переменных
         /// </summary>
-        /// <param name="pictureBox"> Переменная, хранящаяя в себе объект в который будет выводиться изображение.</param>
+        /// <param name="pictureBox"> Переменная, хранящаяя
+        /// в себе объект в который будет выводиться изображение.</param>
         public Video(PictureBox pictureBox)
         {
             _pictureBox = pictureBox;
@@ -65,7 +68,8 @@ namespace DefinitioEyes
         }
 
         /// <summary>
-        /// Метод, необходимый для завершения обработки. Если это необходимо
+        /// Метод, необходимый для завершения обработки.
+        /// Если это необходимо
         /// </summary>
         public void Stop()
         {
@@ -95,10 +99,13 @@ namespace DefinitioEyes
             if (_capture != null)
             {
                 //Получение текущего изображение с камеры
-                Image<Bgr, Byte> currentFrame = _capture.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
+                Image<Bgr, Byte> currentFrame = _capture
+                    .QueryFrame()
+                    .Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
 
                 //Вывод результата
-                _pictureBox.Image = _eyeDetection.Detection(currentFrame).Bitmap;
+                _pictureBox.Image = _eyeDetection
+                    .Detection(currentFrame).Bitmap;
 
                 currentFrame.Dispose();
             }
